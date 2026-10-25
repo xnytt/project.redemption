@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YEEZY_SOUND_SERVER_09 // SECURE_NODE_BREACH</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <style>
+        body {
+            background-color: #050505;
+            color: #c0c0c0;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .leak-container {
+            width: 100%;
+            max-width: 800px;
+            background: #080808;
+            border: 1px solid #333;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
+            padding: 30px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* Server Breach Header Banner */
+        .header-bar {
+            background: #1a0000;
+            color: #ff3333;
+            border-bottom: 1px dashed #ff3333;
+            padding: 8px 12px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .server-meta {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        h1 {
+            font-size: 1rem;
+            color: #ffffff;
+            margin: 0 0 15px 0;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #a0a0a0;
+        }
+
+        /* Command Line Input */
+        .prompt-line {
+            display: flex;
+            align-items: center;
+            margin-top: 25px;
+            background: #000;
+            border: 1px solid #222;
+            padding: 10px;
+        }
+
+        .prompt {
+            color: #33ff33;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #ffffff;
+            font-family: inherit;
+            font-size: 1rem;
+            width: 100%;
+            caret-color: #ff3333;
+            text-transform: uppercase;
+        }
+
+        .error {
+            color: #ff3333;
+            font-size: 0.85rem;
+            margin-top: 15px;
+            display: none;
+            border-left: 3px solid #ff3333;
+            padding-left: 8px;
+        }
+
+        /* Unlocked File Listing */
+        #unlocked-content {
+            display: none;
+        }
+
+        .file-entry {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #0d110d;
+            border: 1px solid #1e331e;
+            padding: 12px 15px;
+            margin-top: 15px;
+        }
+
+        .file-info {
+            font-size: 0.9rem;
+            color: #33ff33;
+        }
+
+        .btn-download {
+            background: #33ff33;
+            color: #000;
+            padding: 6px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+
+        .btn-download:hover {
+            background: #66ff66;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="leak-container">
+        <div class="header-bar">
+            <span>[SYS_ALERT: UNSECURED NODE DETECTED]</span>
+            <span>IP: 192.168.09.2009 // ENCRYPTION: NONE</span>
+        </div>
+
+        <div class="server-meta">
+            HOST: yeezysound-archive.internal<br>
+            DIR: /yzysound/users/yeezy/geniusshit/2009/redemption/<br>
+            STATUS: RESTRICTED ARCHIVE ACCESSED VIA LOCAL PRIVILEGE ESCALATION
+        </div>
+
+        <!-- GATE SCREEN -->
+        <div id="gate-screen">
+            <h1>AUTHENTICATION REQUIRED FOR FILE DECRYPTION</h1>
+            <p>Enter administrative access key recovered from memory dump to unlock payload index.</p>
+
+            <form id="password-form" onsubmit="checkPassword(event)">
+                <div class="prompt-line">
+                    <span class="prompt">root@yeezysound:~#</span>
+                    <input type="text" id="passkey" autofocus autocomplete="off" spellcheck="false" placeholder="ENTER DECRYPTION KEY">
+                </div>
+            </form>
+
+            <div id="error-msg" class="error">ACCESS DENIED. SECURITY PROTOCOL TRIGGERED. <br> HINT: AN ALBUM BORN IN HAWAII, WHICH EVOLVED INTO THE DARK FANTASY.</div>
+        </div>
+
+        <!-- UNLOCKED SCREEN -->
+        <div id="unlocked-content">
+            <h1>AUTHENTICATION SUCCESSFUL // PAYLOAD UNLOCKED</h1>
+            <p>The following confidential sector file has been decrypted from local cache:</p>
+            
+            <div class="file-entry">
+                <div class="file-info">
+                    <strong>[FILE_01]:</strong> KW.09.2009.PRJCT.REDEMPTION.NOTEBOOK1.pdf<br>
+                    <span style="font-size:0.75rem; color:#666;">SIZE: 2.4 MB | HASH: 8f4c2...9ab | CLASSIFICATION: YE'S EYES ONLY</span>
+                </div>
+                <a href="KW.09.2009.PRJCT.REDEMPTION.NOTEBOOK1.html" target="_blank" class="btn-download">VIEW DOCUMENT</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const CORRECT_PASSWORD = "GOODASSJOB";
+
+        function checkPassword(event) {
+            event.preventDefault();
+            const input = document.getElementById("passkey").value.trim().toUpperCase();
+            const errorMsg = document.getElementById("error-msg");
+
+            if (input === CORRECT_PASSWORD) {
+                document.getElementById("gate-screen").style.display = "none";
+                document.getElementById("unlocked-content").style.display = "block";
+            } else {
+                errorMsg.style.display = "block";
+                document.getElementById("passkey").value = "";
+                setTimeout(() => {
+                    errorMsg.style.display = "none";
+                }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>
