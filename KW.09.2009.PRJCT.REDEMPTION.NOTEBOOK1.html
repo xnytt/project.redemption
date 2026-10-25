@@ -10,7 +10,7 @@
             color: #d0d0d0;
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
-            padding: 10px;
+            padding: 20px;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -26,36 +26,35 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 2px solid #ff3333;
-            padding-bottom: 8px;
-            margin-bottom: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .classification {
             color: #ff3333;
             font-weight: bold;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
         }
 
         .file-meta-top {
-            font-size: 0.65rem;
+            font-size: 0.75rem;
             color: #777;
             text-align: right;
         }
 
-        /* Mobile-Optimized Scrollable Container */
+        /* Document Container Styled Like a Leaked Physical Binder/File */
         .pdf-container {
-            width: 100%;
-            max-width: 650px;
-            height: 78vh;
+            width: calc(2.2 * 10rem);
+            height: calc(2.97 * 10rem);
             background-color: #000000;
             border: 2px solid #333;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.9), inset 0 0 10px rgba(255, 255, 255, 0.05);
             position: relative;
-            overflow-y: auto; /* Enables vertical scrolling on mobile */
-            -webkit-overflow-scrolling: touch; /* Fixes momentum scrolling on iOS */
+            overflow: hidden;
             display: flex;
             justify-content: center;
+            align-items: center;
         }
 
         .pdf-frame {
@@ -63,6 +62,7 @@
             height: 100%;
             border: none;
             background-color: #000000;
+            z-index: 10;
         }
 
         /* Watermark stamp across viewer */
@@ -71,7 +71,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) rotate(-30deg);
-            font-size: 2rem;
+            font-size: 3rem;
             color: rgba(255, 51, 51, 0.04);
             font-weight: bold;
             letter-spacing: 5px;
@@ -81,8 +81,8 @@
         }
 
         .footer-note {
-            margin-top: 10px;
-            font-size: 0.7rem;
+            margin-top: 12px;
+            font-size: 0.75rem;
             color: #555;
             text-align: center;
             max-width: 750px;
@@ -92,24 +92,26 @@
 <body>
 
     <div class="leak-banner">
-        <span class="classification">CONFIDENTIAL // EYES ONLY</span>
+        <span class="classification">CONFIDENTIAL // EYES ONLY //</span>
         <div class="file-meta-top">
-            DOC_ID: KW-09-2009-REDEMPTION
+            DOC_ID: KW-09-2009-REDEMPTION<br>
+            SOURCE: INTERCEPTED_OFFICIAL_NOTEBOOK
         </div>
     </div>
 
     <div class="pdf-container">
         <div class="watermark">YEEZY SOUND LEAK</div>
-        <!-- 
-          #toolbar=0 -> Hides toolbar
-          #navpanes=0 -> Hides navigation
-          #view=FitH -> Fits the page width nicely on mobile screens
-        -->
-        <iframe src="KW.09.2009.PRJCT.REDEMPTION.NOTEBOOK1.pdf#toolbar=0&navpanes=0&view=FitH" class="pdf-frame"></iframe>
+        <!-- Using <object> tag with parameter query string -->
+        <object data="KW.09.2009.PRJCT.REDEMPTION.NOTEBOOK1.pdf#toolbar=0&navpanes=0&view=FitBV" type="application/pdf" class="pdf-frame">
+            <div style="padding: 20px; text-align: center; color: #ff3333;">
+                <p>Embedded PDF viewing not supported.</p>
+                <a href="KW.09.2009.PRJCT.REDEMPTION.NOTEBOOK1.pdf" target="_blank" style="color: #33ff33;">[ OPEN RAW FILE ]</a>
+            </div>
+        </object>
     </div>
 
     <div class="footer-note">
-        [SECURE VIEWER ACTIVE] Scroll down to view all pages.
+        [SECURE VIEWER ACTIVE] All rendering is handled locally. Unauthorized distribution or reproduction of this leak is logged.
     </div>
 
 </body>
